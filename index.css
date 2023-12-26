@@ -1,0 +1,26 @@
+#registrationForm{
+    background-color: azure;
+    border: 1px dashed rgb(110, 110, 110);
+    padding: 20px 10px 20px 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.submit{
+    background-color: rgb(75, 158, 197);
+    border-radius: 7px;
+    padding: 8px 12px ;
+    border-style: none;
+}
+
+input:invalid {
+    border: 1px dashed red;
+}
+  
+input:valid {
+    border: 2px solid black;
+}
+
+fieldset{
+    margin: auto 45px;
+}

@@ -11,6 +11,7 @@
 <body>
     <main>
         <form action="#" name="registrationForm" id="registrationForm">
+            <h2>форма регистрации</h2>
             <label for="inputName">Имя</label>
             <input type="text" name="inputName" placeholder="введите имя" required>
             <br><br>
@@ -20,13 +21,16 @@
             <label for="inputAge">Возраст</label>
             <input type="text" name="inputAge" placeholder="введите age" required>
             <br><br>
-            <label for="genderW">ж</label>
-            <input type="radio" name="inputGender" id="genderW" value="ж">
-            <label for="genderM">м</label>
-            <input type="radio" name="inputGender" id="genderM" value="м">
+            <fieldset>
+                <legend>* выберите пол *</legend>
+                <input type="radio" name="inputGender" id="genderW" value="ж"><label for="genderW">жен</label>
+                <input type="radio" name="inputGender" id="genderM" value="м"><label for="genderM">муж</label>
+            </fieldset>
+
             <br><br>
             <label for="inputOccupation">Профессия</label>
-            <select name="inputOccupation" id="inputOccupation" placeholder="выберите" required>
+            <select name="inputOccupation" id="inputOccupation" required>
+                <option value="" hidden>--выберите профессию--</option>
                 <option value="Врач">Врач</option>
                 <option value="Программист">Программист</option>
                 <option value="Учитель">Учитель</option>
@@ -35,7 +39,15 @@
                 <option value="Продавец">Продавец </option>
                 <option value="Другое">Другое</option>
             </select>
+            <br><br>
 
+            <input type="password" name="inputPassword" id="inputPassword" placeholder="введите пароль" minlength="8"
+                pattern="[A-Za-z0-9]{8, }" required>
+            <br><br>
+            <label for="cbAgreement">принять правила</label>
+            <input type="checkbox" name="cbAgreement" id="cbAgreement" required>
+            <br><br>
+            <button type="submit" class="submit" disabled>отправить форму</button>
         </form>
     </main>
 

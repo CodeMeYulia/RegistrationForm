@@ -13,23 +13,26 @@
         <form action="#" name="registrationForm" id="registrationForm">
             <h2>форма регистрации</h2>
             <label for="inputName">Имя</label>
-            <input type="text" name="inputName" placeholder="введите имя" required>
+            <input type="text" name="inputName" placeholder="введите имя" id="inputName" required minlength="2"
+                maxlength="20">
+            <p id="errorName"></p>
             <br><br>
             <label for="inputEmail">Email</label>
-            <input type="email" name="inputEmail" placeholder="введите email" required>
+            <input type="email" name="inputEmail" id="inputEmail" placeholder="введите email">
+            <p id="errorEmail"></p>
             <br><br>
             <label for="inputAge">Возраст</label>
-            <input type="text" name="inputAge" placeholder="введите age" required>
+            <input type="text" name="inputAge" id="inputAge" placeholder="введите age">
+            <p id="errorAge"></p>
             <br><br>
-            <fieldset>
+            <fieldset id="gender">
                 <legend>* выберите пол *</legend>
-                <input type="radio" name="inputGender" id="genderW" value="ж"><label for="genderW">жен</label>
-                <input type="radio" name="inputGender" id="genderM" value="м"><label for="genderM">муж</label>
+                <input type="radio" name="inputGender" id="genderW" value="жен"><label for="genderW">жен</label>
+                <input type="radio" name="inputGender" id="genderM" value="муж"><label for="genderM">муж</label>
             </fieldset>
 
             <br><br>
-            <label for="inputOccupation">Профессия</label>
-            <select name="inputOccupation" id="inputOccupation" required>
+            <select name="inputOccupation" id="inputOccupation">
                 <option value="" hidden>--выберите профессию--</option>
                 <option value="Врач">Врач</option>
                 <option value="Программист">Программист</option>
@@ -39,10 +42,10 @@
                 <option value="Продавец">Продавец </option>
                 <option value="Другое">Другое</option>
             </select>
+            <p id="errorOccupation"></p>
             <br><br>
 
-            <input type="password" name="inputPassword" id="inputPassword" placeholder="введите пароль" minlength="8"
-                pattern="[A-Za-z0-9]{8, }" required>
+            <!-- <input type="password" name="inputPassword" id="inputPassword" placeholder="введите пароль"> -->
             <br><br>
             <label for="cbAgreement">принять правила</label>
             <input type="checkbox" name="cbAgreement" id="cbAgreement" required>

@@ -24,3 +24,7 @@ input:valid {
 fieldset{
     margin: auto 45px;
 }
+
+#errorEmail{
+    display: none;
+}

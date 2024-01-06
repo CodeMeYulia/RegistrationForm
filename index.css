@@ -25,6 +25,8 @@ fieldset{
     margin: auto 45px;
 }
 
-#errorEmail{
+.error{
     display: none;
+    color: red;
+    margin: 5px 45px;
 }

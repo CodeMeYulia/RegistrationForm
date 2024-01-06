@@ -21,21 +21,23 @@ function checkName(){
     const errorName = document.getElementById('errorName');
     if (nameRegex.test(inputName.value)){
         alert('Привет,' + inputName.value);
-        errorName.style.display = 'none'
+        errorName.style.display = 'none';
+        return true;
     } else {
-        errorName.textContent = 'имя некорректно';
+        errorName.textContent = 'имя некорректно!';
         errorName.style.color = 'red';
-        errorName.style.display = 'block'
+        errorName.style.display = 'block';
+        return false;
     }
 }
 
-
 function checkEmail(){
-let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-const errorEmail = document.getElementById('errorEmail');
-if (emailRegex.test(inputEmail.value)){
-    alert('email валиден');
-} else {
+    let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const errorEmail = document.getElementById('errorEmail');
+    if (emailRegex.test(inputEmail.value)){
+        alert('email валиден');
+        errorEmail.style.display = 'none'
+    } else {
     errorEmail.textContent = 'укажите валидный email';
     errorEmail.style.color = 'red';
     errorEmail.style.display = 'block'
@@ -50,7 +52,7 @@ form.addEventListener('submit', function(evt){
     evt.preventDefault();
     checkName();
     // checkEmail();
-    const user = {
+    let user = {
         name: inputName.value,
         email: inputEmail.value,
         age: inputAge.value,
